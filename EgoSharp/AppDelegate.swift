@@ -8,6 +8,8 @@
 
 import UIKit
 
+let Storage = StorageServce()
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

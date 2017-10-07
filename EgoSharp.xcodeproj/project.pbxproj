@@ -7,14 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A00FBBE81F89478400837F1D /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A00FBBE71F89478400837F1D /* Dashboard.storyboard */; };
+		A00FBBEA1F894A6E00837F1D /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00FBBE91F894A6E00837F1D /* DashboardViewController.swift */; };
+		A00FBBED1F894B0400837F1D /* Game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A00FBBEC1F894B0400837F1D /* Game.storyboard */; };
+		A00FBBEF1F894BB500837F1D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00FBBEE1F894BB500837F1D /* GameViewController.swift */; };
+		A00FBBF11F894BEE00837F1D /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00FBBF01F894BEE00837F1D /* GameScene.swift */; };
+		A096F71D1F89450200638FDF /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = A096F71C1F89450200638FDF /* Toast.swift */; };
+		A096F71F1F89469300638FDF /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A096F71E1F89469300638FDF /* StorageService.swift */; };
 		A0CF46681F88DA590071699F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CF46671F88DA590071699F /* AppDelegate.swift */; };
 		A0CF466A1F88DA590071699F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CF46691F88DA590071699F /* ViewController.swift */; };
 		A0CF466D1F88DA590071699F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0CF466B1F88DA590071699F /* Main.storyboard */; };
 		A0CF466F1F88DA590071699F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0CF466E1F88DA590071699F /* Assets.xcassets */; };
 		A0CF46721F88DA590071699F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0CF46701F88DA590071699F /* LaunchScreen.storyboard */; };
+		A0D52E511F88E1D1001E4EE5 /* EGymClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D52E501F88E1D1001E4EE5 /* EGymClient.swift */; };
+		A0D52E541F88F7D5001E4EE5 /* LoginMachineEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D52E531F88F7D5001E4EE5 /* LoginMachineEvent.swift */; };
+		A0D52E561F88FACD001E4EE5 /* PositionMachineEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D52E551F88FACD001E4EE5 /* PositionMachineEvent.swift */; };
+		A0D52E581F88FBF5001E4EE5 /* LogoutMachineEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D52E571F88FBF5001E4EE5 /* LogoutMachineEvent.swift */; };
+		A0D52E5D1F88FD4F001E4EE5 /* TrainingCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D52E5C1F88FD4F001E4EE5 /* TrainingCollector.swift */; };
+		A0D52E5F1F88FDE2001E4EE5 /* TrainingRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D52E5E1F88FDE2001E4EE5 /* TrainingRequestModel.swift */; };
+		A0EA4C3B1F8933E000026CF6 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0EA4C3A1F8933E000026CF6 /* Login.storyboard */; };
+		A0EA4C3D1F8933F300026CF6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EA4C3C1F8933F300026CF6 /* LoginViewController.swift */; };
+		A0EA4C421F8938D800026CF6 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EA4C411F8938D800026CF6 /* NetworkService.swift */; };
+		A0EA4C451F89399600026CF6 /* ObjectMapper+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EA4C441F89399600026CF6 /* ObjectMapper+Alamofire.swift */; };
+		A0EA4C491F893AE300026CF6 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EA4C481F893AE300026CF6 /* UserModel.swift */; };
+		C2BAF55E08E9A26E91625D94 /* Pods_EgoSharp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92956435625AF6BA9CBFB853 /* Pods_EgoSharp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8646F1D3C1A0BC0D0D8BB007 /* Pods-EgoSharp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EgoSharp.release.xcconfig"; path = "Pods/Target Support Files/Pods-EgoSharp/Pods-EgoSharp.release.xcconfig"; sourceTree = "<group>"; };
+		92956435625AF6BA9CBFB853 /* Pods_EgoSharp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EgoSharp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A00FBBE71F89478400837F1D /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
+		A00FBBE91F894A6E00837F1D /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		A00FBBEC1F894B0400837F1D /* Game.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Game.storyboard; sourceTree = "<group>"; };
+		A00FBBEE1F894BB500837F1D /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		A00FBBF01F894BEE00837F1D /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		A096F71C1F89450200638FDF /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		A096F71E1F89469300638FDF /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		A0CF46641F88DA590071699F /* EgoSharp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EgoSharp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0CF46671F88DA590071699F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0CF46691F88DA590071699F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +50,18 @@
 		A0CF466E1F88DA590071699F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0CF46711F88DA590071699F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A0CF46731F88DA590071699F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0D52E501F88E1D1001E4EE5 /* EGymClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EGymClient.swift; sourceTree = "<group>"; };
+		A0D52E531F88F7D5001E4EE5 /* LoginMachineEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMachineEvent.swift; sourceTree = "<group>"; };
+		A0D52E551F88FACD001E4EE5 /* PositionMachineEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionMachineEvent.swift; sourceTree = "<group>"; };
+		A0D52E571F88FBF5001E4EE5 /* LogoutMachineEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutMachineEvent.swift; sourceTree = "<group>"; };
+		A0D52E5C1F88FD4F001E4EE5 /* TrainingCollector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingCollector.swift; sourceTree = "<group>"; };
+		A0D52E5E1F88FDE2001E4EE5 /* TrainingRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingRequestModel.swift; sourceTree = "<group>"; };
+		A0EA4C3A1F8933E000026CF6 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		A0EA4C3C1F8933F300026CF6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A0EA4C411F8938D800026CF6 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		A0EA4C441F89399600026CF6 /* ObjectMapper+Alamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObjectMapper+Alamofire.swift"; sourceTree = "<group>"; };
+		A0EA4C481F893AE300026CF6 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		E8C86325AB5ABE7BA5E27E1E /* Pods-EgoSharp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EgoSharp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EgoSharp/Pods-EgoSharp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +69,56 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2BAF55E08E9A26E91625D94 /* Pods_EgoSharp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6043064E8D7F5CAAAEBAA957 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E8C86325AB5ABE7BA5E27E1E /* Pods-EgoSharp.debug.xcconfig */,
+				8646F1D3C1A0BC0D0D8BB007 /* Pods-EgoSharp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		876DF8C727BD7AAF90C13DD9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				92956435625AF6BA9CBFB853 /* Pods_EgoSharp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A00FBBE61F89476800837F1D /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				A00FBBE71F89478400837F1D /* Dashboard.storyboard */,
+				A00FBBE91F894A6E00837F1D /* DashboardViewController.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		A00FBBEB1F894AED00837F1D /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				A00FBBEC1F894B0400837F1D /* Game.storyboard */,
+				A00FBBEE1F894BB500837F1D /* GameViewController.swift */,
+				A00FBBF01F894BEE00837F1D /* GameScene.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
 		A0CF465B1F88DA590071699F = {
 			isa = PBXGroup;
 			children = (
 				A0CF46661F88DA590071699F /* EgoSharp */,
 				A0CF46651F88DA590071699F /* Products */,
+				6043064E8D7F5CAAAEBAA957 /* Pods */,
+				876DF8C727BD7AAF90C13DD9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +133,13 @@
 		A0CF46661F88DA590071699F /* EgoSharp */ = {
 			isa = PBXGroup;
 			children = (
+				A00FBBEB1F894AED00837F1D /* Game */,
+				A00FBBE61F89476800837F1D /* Dashboard */,
+				A0EA4C431F89398400026CF6 /* Extensions */,
+				A0EA4C401F8938C800026CF6 /* Services */,
+				A0EA4C391F8933C800026CF6 /* Login */,
+				A0D52E591F88FD23001E4EE5 /* Logic */,
+				A0D52E521F88F5C0001E4EE5 /* Model */,
 				A0CF46671F88DA590071699F /* AppDelegate.swift */,
 				A0CF46691F88DA590071699F /* ViewController.swift */,
 				A0CF466B1F88DA590071699F /* Main.storyboard */,
@@ -64,6 +150,70 @@
 			path = EgoSharp;
 			sourceTree = "<group>";
 		};
+		A0D52E521F88F5C0001E4EE5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A0EA4C471F893ACA00026CF6 /* Rest */,
+				A0EA4C461F893ABD00026CF6 /* MQ */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A0D52E591F88FD23001E4EE5 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				A0D52E501F88E1D1001E4EE5 /* EGymClient.swift */,
+				A0D52E5C1F88FD4F001E4EE5 /* TrainingCollector.swift */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		A0EA4C391F8933C800026CF6 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A0EA4C3A1F8933E000026CF6 /* Login.storyboard */,
+				A0EA4C3C1F8933F300026CF6 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		A0EA4C401F8938C800026CF6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A0EA4C411F8938D800026CF6 /* NetworkService.swift */,
+				A096F71E1F89469300638FDF /* StorageService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A0EA4C431F89398400026CF6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A0EA4C441F89399600026CF6 /* ObjectMapper+Alamofire.swift */,
+				A096F71C1F89450200638FDF /* Toast.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A0EA4C461F893ABD00026CF6 /* MQ */ = {
+			isa = PBXGroup;
+			children = (
+				A0D52E531F88F7D5001E4EE5 /* LoginMachineEvent.swift */,
+				A0D52E551F88FACD001E4EE5 /* PositionMachineEvent.swift */,
+				A0D52E571F88FBF5001E4EE5 /* LogoutMachineEvent.swift */,
+			);
+			path = MQ;
+			sourceTree = "<group>";
+		};
+		A0EA4C471F893ACA00026CF6 /* Rest */ = {
+			isa = PBXGroup;
+			children = (
+				A0D52E5E1F88FDE2001E4EE5 /* TrainingRequestModel.swift */,
+				A0EA4C481F893AE300026CF6 /* UserModel.swift */,
+			);
+			path = Rest;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +221,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A0CF46761F88DA590071699F /* Build configuration list for PBXNativeTarget "EgoSharp" */;
 			buildPhases = (
+				534F805442D15DF8DAA6E84E /* [CP] Check Pods Manifest.lock */,
 				A0CF46601F88DA590071699F /* Sources */,
 				A0CF46611F88DA590071699F /* Frameworks */,
 				A0CF46621F88DA590071699F /* Resources */,
+				FB20F2A5280151A42CB76F96 /* [CP] Embed Pods Frameworks */,
+				4BB31B5892600C4776694063 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,21 +276,101 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0EA4C3B1F8933E000026CF6 /* Login.storyboard in Resources */,
+				A00FBBE81F89478400837F1D /* Dashboard.storyboard in Resources */,
 				A0CF46721F88DA590071699F /* LaunchScreen.storyboard in Resources */,
 				A0CF466F1F88DA590071699F /* Assets.xcassets in Resources */,
+				A00FBBED1F894B0400837F1D /* Game.storyboard in Resources */,
 				A0CF466D1F88DA590071699F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4BB31B5892600C4776694063 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EgoSharp/Pods-EgoSharp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		534F805442D15DF8DAA6E84E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EgoSharp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB20F2A5280151A42CB76F96 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-EgoSharp/Pods-EgoSharp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyZeroMQ/SwiftyZeroMQ.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyZeroMQ.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EgoSharp/Pods-EgoSharp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A0CF46601F88DA590071699F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0EA4C421F8938D800026CF6 /* NetworkService.swift in Sources */,
+				A096F71F1F89469300638FDF /* StorageService.swift in Sources */,
+				A0EA4C491F893AE300026CF6 /* UserModel.swift in Sources */,
+				A0EA4C3D1F8933F300026CF6 /* LoginViewController.swift in Sources */,
 				A0CF466A1F88DA590071699F /* ViewController.swift in Sources */,
+				A0D52E561F88FACD001E4EE5 /* PositionMachineEvent.swift in Sources */,
+				A0D52E5D1F88FD4F001E4EE5 /* TrainingCollector.swift in Sources */,
+				A00FBBEA1F894A6E00837F1D /* DashboardViewController.swift in Sources */,
+				A0D52E5F1F88FDE2001E4EE5 /* TrainingRequestModel.swift in Sources */,
 				A0CF46681F88DA590071699F /* AppDelegate.swift in Sources */,
+				A0D52E541F88F7D5001E4EE5 /* LoginMachineEvent.swift in Sources */,
+				A00FBBF11F894BEE00837F1D /* GameScene.swift in Sources */,
+				A0D52E581F88FBF5001E4EE5 /* LogoutMachineEvent.swift in Sources */,
+				A00FBBEF1F894BB500837F1D /* GameViewController.swift in Sources */,
+				A0EA4C451F89399600026CF6 /* ObjectMapper+Alamofire.swift in Sources */,
+				A0D52E511F88E1D1001E4EE5 /* EGymClient.swift in Sources */,
+				A096F71D1F89450200638FDF /* Toast.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +505,7 @@
 		};
 		A0CF46771F88DA590071699F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8C86325AB5ABE7BA5E27E1E /* Pods-EgoSharp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -280,13 +514,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bosnian.EgoSharp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		A0CF46781F88DA590071699F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8646F1D3C1A0BC0D0D8BB007 /* Pods-EgoSharp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -295,7 +530,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bosnian.EgoSharp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

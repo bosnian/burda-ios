@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ftd-sg-utp">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="mk2-2M-RuX">
+            <objects>
+                <viewController id="ftd-sg-utp" customClass="GameViewController" customModule="EgoSharp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MH2-3i-TqX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="opy-VR-al8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </skView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="snQ-og-D62">
+                                <rect key="frame" x="30" y="35" width="59" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="closePressed:" destination="ftd-sg-utp" eventType="touchUpInside" id="ej6-cV-e7Z"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="snQ-og-D62" firstAttribute="top" secondItem="bJv-PQ-p7o" secondAttribute="top" constant="15" id="ATg-yR-yVz"/>
+                            <constraint firstAttribute="trailing" secondItem="opy-VR-al8" secondAttribute="trailing" id="Csw-Hz-iZh"/>
+                            <constraint firstAttribute="bottom" secondItem="opy-VR-al8" secondAttribute="bottom" id="EIG-13-zol"/>
+                            <constraint firstItem="opy-VR-al8" firstAttribute="leading" secondItem="MH2-3i-TqX" secondAttribute="leading" id="Gir-DD-dNE"/>
+                            <constraint firstItem="snQ-og-D62" firstAttribute="leading" secondItem="bJv-PQ-p7o" secondAttribute="leading" constant="30" id="HXy-cM-i0x"/>
+                            <constraint firstItem="opy-VR-al8" firstAttribute="top" secondItem="MH2-3i-TqX" secondAttribute="top" id="RJv-ud-CQS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bJv-PQ-p7o"/>
+                    </view>
+                    <connections>
+                        <outlet property="skView" destination="opy-VR-al8" id="YCa-Vo-LCY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LtP-Qm-99w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="480.80000000000001" y="-89.505247376311857"/>
+        </scene>
+    </scenes>
+</document>

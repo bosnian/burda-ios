@@ -1,0 +1,6 @@
+framework module Pods_EgoSharp {
+  umbrella header "Pods-EgoSharp-umbrella.h"
+
+  export *
+  module * { export * }
+}
