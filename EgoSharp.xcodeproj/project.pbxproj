@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A006187A1F89BF4D009F879F /* Nokia.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A00618791F89BF4D009F879F /* Nokia.storyboard */; };
+		A006187C1F89BFB8009F879F /* NokiaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A006187B1F89BFB8009F879F /* NokiaViewController.swift */; };
 		A00FBBE81F89478400837F1D /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A00FBBE71F89478400837F1D /* Dashboard.storyboard */; };
 		A00FBBEA1F894A6E00837F1D /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00FBBE91F894A6E00837F1D /* DashboardViewController.swift */; };
 		A00FBBED1F894B0400837F1D /* Game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A00FBBEC1F894B0400837F1D /* Game.storyboard */; };
 		A00FBBEF1F894BB500837F1D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00FBBEE1F894BB500837F1D /* GameViewController.swift */; };
 		A00FBBF11F894BEE00837F1D /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00FBBF01F894BEE00837F1D /* GameScene.swift */; };
+		A075ADF91F89B48A00043CC6 /* Trainings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A075ADF81F89B48A00043CC6 /* Trainings.storyboard */; };
+		A075ADFB1F89B4AD00043CC6 /* TrainingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A075ADFA1F89B4AD00043CC6 /* TrainingsTableViewController.swift */; };
+		A075ADFD1F89B4FB00043CC6 /* TrainingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A075ADFC1F89B4FB00043CC6 /* TrainingModel.swift */; };
+		A075AE001F89B75200043CC6 /* TrainigTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A075ADFE1F89B75200043CC6 /* TrainigTableViewCell.swift */; };
+		A075AE011F89B75200043CC6 /* TrainigTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A075ADFF1F89B75200043CC6 /* TrainigTableViewCell.xib */; };
 		A096F71D1F89450200638FDF /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = A096F71C1F89450200638FDF /* Toast.swift */; };
 		A096F71F1F89469300638FDF /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A096F71E1F89469300638FDF /* StorageService.swift */; };
 		A0CF46681F88DA590071699F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CF46671F88DA590071699F /* AppDelegate.swift */; };
-		A0CF466A1F88DA590071699F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CF46691F88DA590071699F /* ViewController.swift */; };
 		A0CF466D1F88DA590071699F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0CF466B1F88DA590071699F /* Main.storyboard */; };
 		A0CF466F1F88DA590071699F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0CF466E1F88DA590071699F /* Assets.xcassets */; };
 		A0CF46721F88DA590071699F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0CF46701F88DA590071699F /* LaunchScreen.storyboard */; };
@@ -36,16 +42,22 @@
 /* Begin PBXFileReference section */
 		8646F1D3C1A0BC0D0D8BB007 /* Pods-EgoSharp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EgoSharp.release.xcconfig"; path = "Pods/Target Support Files/Pods-EgoSharp/Pods-EgoSharp.release.xcconfig"; sourceTree = "<group>"; };
 		92956435625AF6BA9CBFB853 /* Pods_EgoSharp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EgoSharp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A00618791F89BF4D009F879F /* Nokia.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Nokia.storyboard; sourceTree = "<group>"; };
+		A006187B1F89BFB8009F879F /* NokiaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NokiaViewController.swift; sourceTree = "<group>"; };
 		A00FBBE71F89478400837F1D /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		A00FBBE91F894A6E00837F1D /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		A00FBBEC1F894B0400837F1D /* Game.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Game.storyboard; sourceTree = "<group>"; };
 		A00FBBEE1F894BB500837F1D /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		A00FBBF01F894BEE00837F1D /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		A075ADF81F89B48A00043CC6 /* Trainings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Trainings.storyboard; sourceTree = "<group>"; };
+		A075ADFA1F89B4AD00043CC6 /* TrainingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingsTableViewController.swift; sourceTree = "<group>"; };
+		A075ADFC1F89B4FB00043CC6 /* TrainingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingModel.swift; sourceTree = "<group>"; };
+		A075ADFE1F89B75200043CC6 /* TrainigTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainigTableViewCell.swift; sourceTree = "<group>"; };
+		A075ADFF1F89B75200043CC6 /* TrainigTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainigTableViewCell.xib; sourceTree = "<group>"; };
 		A096F71C1F89450200638FDF /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		A096F71E1F89469300638FDF /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		A0CF46641F88DA590071699F /* EgoSharp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EgoSharp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0CF46671F88DA590071699F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A0CF46691F88DA590071699F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A0CF466C1F88DA590071699F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A0CF466E1F88DA590071699F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0CF46711F88DA590071699F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -93,6 +105,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A00618781F89BF3C009F879F /* Nokia */ = {
+			isa = PBXGroup;
+			children = (
+				A00618791F89BF4D009F879F /* Nokia.storyboard */,
+				A006187B1F89BFB8009F879F /* NokiaViewController.swift */,
+			);
+			path = Nokia;
+			sourceTree = "<group>";
+		};
 		A00FBBE61F89476800837F1D /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +131,17 @@
 				A00FBBF01F894BEE00837F1D /* GameScene.swift */,
 			);
 			path = Game;
+			sourceTree = "<group>";
+		};
+		A075ADF71F89B46500043CC6 /* Trainings */ = {
+			isa = PBXGroup;
+			children = (
+				A075ADF81F89B48A00043CC6 /* Trainings.storyboard */,
+				A075ADFA1F89B4AD00043CC6 /* TrainingsTableViewController.swift */,
+				A075ADFE1F89B75200043CC6 /* TrainigTableViewCell.swift */,
+				A075ADFF1F89B75200043CC6 /* TrainigTableViewCell.xib */,
+			);
+			path = Trainings;
 			sourceTree = "<group>";
 		};
 		A0CF465B1F88DA590071699F = {
@@ -133,6 +165,8 @@
 		A0CF46661F88DA590071699F /* EgoSharp */ = {
 			isa = PBXGroup;
 			children = (
+				A00618781F89BF3C009F879F /* Nokia */,
+				A075ADF71F89B46500043CC6 /* Trainings */,
 				A00FBBEB1F894AED00837F1D /* Game */,
 				A00FBBE61F89476800837F1D /* Dashboard */,
 				A0EA4C431F89398400026CF6 /* Extensions */,
@@ -141,7 +175,6 @@
 				A0D52E591F88FD23001E4EE5 /* Logic */,
 				A0D52E521F88F5C0001E4EE5 /* Model */,
 				A0CF46671F88DA590071699F /* AppDelegate.swift */,
-				A0CF46691F88DA590071699F /* ViewController.swift */,
 				A0CF466B1F88DA590071699F /* Main.storyboard */,
 				A0CF466E1F88DA590071699F /* Assets.xcassets */,
 				A0CF46701F88DA590071699F /* LaunchScreen.storyboard */,
@@ -210,6 +243,7 @@
 			children = (
 				A0D52E5E1F88FDE2001E4EE5 /* TrainingRequestModel.swift */,
 				A0EA4C481F893AE300026CF6 /* UserModel.swift */,
+				A075ADFC1F89B4FB00043CC6 /* TrainingModel.swift */,
 			);
 			path = Rest;
 			sourceTree = "<group>";
@@ -278,10 +312,13 @@
 			files = (
 				A0EA4C3B1F8933E000026CF6 /* Login.storyboard in Resources */,
 				A00FBBE81F89478400837F1D /* Dashboard.storyboard in Resources */,
+				A075AE011F89B75200043CC6 /* TrainigTableViewCell.xib in Resources */,
+				A006187A1F89BF4D009F879F /* Nokia.storyboard in Resources */,
 				A0CF46721F88DA590071699F /* LaunchScreen.storyboard in Resources */,
 				A0CF466F1F88DA590071699F /* Assets.xcassets in Resources */,
 				A00FBBED1F894B0400837F1D /* Game.storyboard in Resources */,
 				A0CF466D1F88DA590071699F /* Main.storyboard in Resources */,
+				A075ADF91F89B48A00043CC6 /* Trainings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,8 +394,10 @@
 				A0EA4C421F8938D800026CF6 /* NetworkService.swift in Sources */,
 				A096F71F1F89469300638FDF /* StorageService.swift in Sources */,
 				A0EA4C491F893AE300026CF6 /* UserModel.swift in Sources */,
+				A075ADFD1F89B4FB00043CC6 /* TrainingModel.swift in Sources */,
 				A0EA4C3D1F8933F300026CF6 /* LoginViewController.swift in Sources */,
-				A0CF466A1F88DA590071699F /* ViewController.swift in Sources */,
+				A006187C1F89BFB8009F879F /* NokiaViewController.swift in Sources */,
+				A075AE001F89B75200043CC6 /* TrainigTableViewCell.swift in Sources */,
 				A0D52E561F88FACD001E4EE5 /* PositionMachineEvent.swift in Sources */,
 				A0D52E5D1F88FD4F001E4EE5 /* TrainingCollector.swift in Sources */,
 				A00FBBEA1F894A6E00837F1D /* DashboardViewController.swift in Sources */,
@@ -371,6 +410,7 @@
 				A0EA4C451F89399600026CF6 /* ObjectMapper+Alamofire.swift in Sources */,
 				A0D52E511F88E1D1001E4EE5 /* EGymClient.swift in Sources */,
 				A096F71D1F89450200638FDF /* Toast.swift in Sources */,
+				A075ADFB1F89B4AD00043CC6 /* TrainingsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

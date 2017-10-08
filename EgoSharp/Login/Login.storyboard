@@ -18,23 +18,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginback" translatesAutoresizingMaskIntoConstraints="NO" id="NmW-IS-8Gg">
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="NmW-IS-8Gg">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I4f-oi-Uc3">
                                 <rect key="frame" x="0.0" y="233.5" width="375" height="200"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uAN-d7-MAw">
-                                        <rect key="frame" x="30" y="0.0" width="315" height="120"/>
+                                        <rect key="frame" x="30" y="0.0" width="315" height="100"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vCh-ld-7FV">
-                                                <rect key="frame" x="0.0" y="0.0" width="315" height="60"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="315" height="50"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fEf-bi-yP5">
-                                                <rect key="frame" x="0.0" y="60" width="315" height="60"/>
+                                                <rect key="frame" x="0.0" y="50" width="315" height="50"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -47,7 +47,7 @@
                                             <constraint firstItem="fEf-bi-yP5" firstAttribute="leading" secondItem="uAN-d7-MAw" secondAttribute="leading" id="BQy-6n-pMx"/>
                                             <constraint firstAttribute="bottom" secondItem="fEf-bi-yP5" secondAttribute="bottom" id="DBk-8W-XGy"/>
                                             <constraint firstAttribute="trailing" secondItem="fEf-bi-yP5" secondAttribute="trailing" id="aYV-WM-Lrh"/>
-                                            <constraint firstAttribute="height" constant="120" id="d8R-LH-HEF"/>
+                                            <constraint firstAttribute="height" constant="100" id="d8R-LH-HEF"/>
                                             <constraint firstAttribute="trailing" secondItem="vCh-ld-7FV" secondAttribute="trailing" id="e7s-Ug-C7f"/>
                                             <constraint firstItem="vCh-ld-7FV" firstAttribute="leading" secondItem="uAN-d7-MAw" secondAttribute="leading" id="lAN-WI-mQ2"/>
                                             <constraint firstItem="vCh-ld-7FV" firstAttribute="top" secondItem="uAN-d7-MAw" secondAttribute="top" id="n5h-MU-HDa"/>
@@ -55,7 +55,7 @@
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YyK-Yh-Zyq">
                                         <rect key="frame" x="50" y="150" width="275" height="50"/>
-                                        <color key="backgroundColor" red="0.21094715115917306" green="0.67689077737942482" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.21176470588235294" green="0.67843137254901964" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="UOb-QA-Jlw"/>
                                         </constraints>
@@ -87,9 +87,6 @@
                                 <state key="normal" title="Register">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="loginPressed:" destination="VLZ-6E-fdi" eventType="touchUpInside" id="8OC-u9-JUz"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -122,6 +119,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="loginback" width="2560" height="1600"/>
+        <image name="background" width="876" height="798"/>
     </resources>
 </document>

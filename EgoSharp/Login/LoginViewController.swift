@@ -48,7 +48,23 @@ class LoginViewController: UIViewController {
     }
     
     func success(model: UserModel) {
+        
         Storage.User = model
+        
+        if let id = model.partnerId {
+            let service = NetworkService()
+            service.RequestPartner(id: id, success: successPartner, fail: fail)
+        } else {
+            openDashboard()
+        }
+    }
+    
+    func successPartner(model: UserModel) {
+        Storage.Partner = model
+        openDashboard()
+    }
+    
+    func openDashboard() {
         let vc = UIStoryboard(name: "Dashboard", bundle: nil).instantiateInitialViewController()!
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.window?.rootViewController = vc

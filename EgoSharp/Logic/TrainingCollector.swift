@@ -17,7 +17,9 @@ class TrainingCollector {
     
     var position = 0.0
     
+    var startCallback: LoginEventCallback?
     var positionUpdatedCallback: PositionEventCallback?
+    var finishCallback: LogoutEventCallback?
     
     init(client: EGymClient, rfid: String?) {
         self.client = client
@@ -37,29 +39,27 @@ class TrainingCollector {
             data?.rfid = model.rfid
             data?.start = model.timestamp
             data?.machine_type = model.machine_type
-            
+            startCallback?(model)
             print("######## START")
-            print("#######")
         }
     }
     
     func positionUpdated(model: PositionMachineEvent) {
-        if rfid == model.rfid {
+        if rfid == nil || rfid == model.rfid {
             if let position = model.payload?.position {
                 self.position = Double(position)
                 positionUpdatedCallback?(model)
                 print("######## POSITION")
-                print("#######")
             }
         }
     }
     
     func endedTraining(model: LogoutMachineEvent) {
         
-        if data != nil && rfid == model.rfid {
+        if data != nil && ( rfid == nil || rfid == model.rfid ){
             print("######## END")
-            print("#######")
             data!.end = model.timestamp
+            finishCallback?(model)
         }
     }
 }

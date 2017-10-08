@@ -13,6 +13,8 @@ typealias LoginEventCallback = (LoginMachineEvent)->()
 typealias PositionEventCallback = (PositionMachineEvent)->()
 typealias LogoutEventCallback = (LogoutMachineEvent)->()
 
+typealias EmptyCallback = ()->()
+
 class EGymClient {
     
     let ENDPOINT = "tcp://35.195.199.160:5556"
@@ -75,9 +77,23 @@ class EGymClient {
             let model = Mapper<PositionMachineEvent>().map(JSONString: parsed)!
             position?(model)
         } else if data.starts(with: "logout ") {
-            let parsed = data.replacingOccurrences(of: "logout ", with: "")
+            
+        } else if data.starts(with: "training_weight_data ") {
+            
+        } else if data.starts(with: "training_direction_data "){
+            
+        } else if data.starts(with: "training_repetition_data "){
+            
+        }  else if data.starts(with: "start_training "){
+//            let parsed = data.replacingOccurrences(of: "start_training ", with: "")
+//            let model = Mapper<LoginMachineEvent>().map(JSONString: parsed)!
+//            startedTraining?(model)
+        }  else if data.starts(with: "end_training "){
+            let parsed = data.replacingOccurrences(of: "end_training ", with: "")
             let model = Mapper<LogoutMachineEvent>().map(JSONString: parsed)!
             ended?(model)
+        }  else {
+            print(data)
         }
     }
 }

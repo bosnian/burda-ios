@@ -35,3 +35,11 @@ class UserModel : Mappable {
     }
 }
 
+class EmptyModel : Mappable {
+    init() { }
+    
+    required init?(map: Map) { }
+    
+    func mapping(map: Map) {
+    }
+}
