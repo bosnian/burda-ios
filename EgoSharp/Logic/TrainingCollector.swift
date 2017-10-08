@@ -28,6 +28,13 @@ class TrainingCollector {
         client.startedTraining = startedTraining
         client.position = positionUpdated
         client.ended = endedTraining
+        
+        do {
+            
+            try client.connect()
+        } catch {
+            
+        }
     }
     
     func startedTraining(model: LoginMachineEvent) {
@@ -45,6 +52,7 @@ class TrainingCollector {
     }
     
     func positionUpdated(model: PositionMachineEvent) {
+        print("######## POSITION")
         if rfid == nil || rfid == model.rfid {
             if let position = model.payload?.position {
                 self.position = Double(position)

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0DH-rf-2aR">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Book</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Profile View Controller-->
+        <scene sceneID="Wuo-GD-ase">
+            <objects>
+                <viewController id="0DH-rf-2aR" customClass="ProfileViewController" customModule="EgoSharp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TRT-rl-2wf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YyQ-Cw-4cV">
+                                <rect key="frame" x="20" y="40" width="30" height="30"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="close" translatesAutoresizingMaskIntoConstraints="NO" id="gvD-uC-Vyz">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="8Q5-Az-upE"/>
+                                    <constraint firstItem="gvD-uC-Vyz" firstAttribute="top" secondItem="YyQ-Cw-4cV" secondAttribute="top" id="O0i-cy-pOI"/>
+                                    <constraint firstAttribute="bottom" secondItem="gvD-uC-Vyz" secondAttribute="bottom" id="aA9-9K-KM1"/>
+                                    <constraint firstAttribute="trailing" secondItem="gvD-uC-Vyz" secondAttribute="trailing" id="eGl-Dq-nqI"/>
+                                    <constraint firstItem="gvD-uC-Vyz" firstAttribute="leading" secondItem="YyQ-Cw-4cV" secondAttribute="leading" id="hKk-Q0-wdy"/>
+                                    <constraint firstAttribute="height" constant="30" id="tDI-qy-603"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ynM-Fz-3EH">
+                                <rect key="frame" x="30" y="70" width="315" height="547"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="21"/>
+                                <color key="textColor" red="0.21176470589999999" green="0.67843137249999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ynM-Fz-3EH" firstAttribute="top" secondItem="G8o-bA-bWb" secondAttribute="top" constant="50" id="4S9-EZ-BoU"/>
+                            <constraint firstItem="ynM-Fz-3EH" firstAttribute="leading" secondItem="G8o-bA-bWb" secondAttribute="leading" constant="30" id="6jO-fT-g7f"/>
+                            <constraint firstItem="G8o-bA-bWb" firstAttribute="bottom" secondItem="ynM-Fz-3EH" secondAttribute="bottom" constant="50" id="Emc-Rk-lfi"/>
+                            <constraint firstItem="G8o-bA-bWb" firstAttribute="trailing" secondItem="ynM-Fz-3EH" secondAttribute="trailing" constant="30" id="dq8-BC-F6m"/>
+                            <constraint firstItem="YyQ-Cw-4cV" firstAttribute="top" secondItem="G8o-bA-bWb" secondAttribute="top" constant="20" id="h7V-fd-y3m"/>
+                            <constraint firstItem="YyQ-Cw-4cV" firstAttribute="leading" secondItem="G8o-bA-bWb" secondAttribute="leading" constant="20" id="qsj-g1-RrP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="G8o-bA-bWb"/>
+                    </view>
+                    <connections>
+                        <outlet property="closeImageView" destination="gvD-uC-Vyz" id="gVb-l1-zkW"/>
+                        <outlet property="closeView" destination="YyQ-Cw-4cV" id="Wvx-Nm-RdO"/>
+                        <outlet property="content" destination="ynM-Fz-3EH" id="MwS-FE-kAN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oJz-8Z-Q6n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="543" y="-83"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="close" width="100" height="100"/>
+    </resources>
+</document>

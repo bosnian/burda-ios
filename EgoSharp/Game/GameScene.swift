@@ -36,12 +36,13 @@ class GameScene: SKScene {
     
     var gameFinishedCallback: EmptyCallback?
     
-    var pointIndexes = [0,1,2,3,4,5,4,3,2,1,0,1,2,3,4,5]
+    var pointIndexes = [0,1,2,3,4,5,4,3,2,1,0,1,2,3,4,5,4,3,2,1,0,1,2,3,4,5,4,3,2,1,0,1,2,3,4,5]
     
     override func didMove(to view: SKView) {
+        backgroundColor = .white
         resultLabel.position = CGPoint(x: view.frame.width - 50, y: view.frame.height - 70)
         resultLabel.fontSize = 20
-        resultLabel.fontColor = SKColor.white
+        resultLabel.fontColor = UIColor(red: 54.0 / 255.0, green: 173.0 / 255.0, blue: 1.0, alpha: 1.0)
         resultLabel.fontName = "Avenir"
         resultLabel.zPosition = 15
         addChild(resultLabel)
@@ -49,7 +50,7 @@ class GameScene: SKScene {
         if hasPartner {
             partnerResultLabel.position = CGPoint(x: view.frame.width - 100, y: view.frame.height - 110)
             partnerResultLabel.fontSize = 20
-            partnerResultLabel.fontColor = SKColor.white
+            partnerResultLabel.fontColor = UIColor(red: 54.0 / 255.0, green: 173.0 / 255.0, blue: 1.0, alpha: 1.0)
             partnerResultLabel.fontName = "Avenir"
             partnerResultLabel.zPosition = 15
             addChild(partnerResultLabel)
@@ -59,7 +60,7 @@ class GameScene: SKScene {
         waitingMessage.fontSize = 40
         waitingMessage.text = "Waiting..."
         waitingMessage.zPosition = 15
-        waitingMessage.fontColor = SKColor.white
+        waitingMessage.fontColor = UIColor(red: 54.0 / 255.0, green: 173.0 / 255.0, blue: 1.0, alpha: 1.0)
         waitingMessage.fontName = "Avenir"
         addChild(waitingMessage)
         
@@ -68,7 +69,7 @@ class GameScene: SKScene {
         circle!.strokeColor = SKColor.white
         circle!.glowWidth = 1.0
         circle!.zPosition = 10
-        circle!.fillColor = SKColor.white
+        circle!.fillColor = UIColor(red: 54.0 / 255.0, green: 173.0 / 255.0, blue: 1.0, alpha: 1.0)
         self.addChild(circle!)
         
         if hasPartner {
@@ -76,7 +77,7 @@ class GameScene: SKScene {
             partnerCircle!.strokeColor = SKColor.white
             partnerCircle!.glowWidth = 1.0
             partnerCircle!.zPosition = 10
-            partnerCircle!.fillColor = SKColor.red
+            partnerCircle!.fillColor = UIColor(red: 54.0 / 255.0, green: 173.0 / 255.0, blue: 1.0, alpha: 0.5)
             self.addChild(partnerCircle!)
         }
         
@@ -94,7 +95,7 @@ class GameScene: SKScene {
                 
                 let tile = TileNode()
                 tile.size = CGSize(width: tileWidth, height: tileHeight)
-                tile.color = .red
+                tile.color = UIColor(red: 54.0 / 255.0, green: 173.0 / 255.0, blue: 1.0, alpha: 0.5)
                 tile.anchorPoint = .zero
                 
                 let x = frame.width - 50 +  -1 * tileWidth/2 + CGFloat(i) * (tile.size.width + 10)

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5D709E86F2BF3EE63D0C77EC09A0A7F4"
+               BlueprintIdentifier = "8746BCC2D4054323837517B84927FB01"
                BuildableName = "Pods_EgoSharp.framework"
                BlueprintName = "Pods-EgoSharp"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5D709E86F2BF3EE63D0C77EC09A0A7F4"
+            BlueprintIdentifier = "8746BCC2D4054323837517B84927FB01"
             BuildableName = "Pods_EgoSharp.framework"
             BlueprintName = "Pods-EgoSharp"
             ReferencedContainer = "container:Pods.xcodeproj">

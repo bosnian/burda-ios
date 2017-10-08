@@ -72,12 +72,14 @@ class EGymClient {
             let parsed = data.replacingOccurrences(of: "login ", with: "")
             let model = Mapper<LoginMachineEvent>().map(JSONString: parsed)!
             startedTraining?(model)
-        } else if data.starts(with: "training_position_data")  {
+        } else if data.starts(with: "training_position_data ")  {
             let parsed = data.replacingOccurrences(of: "training_position_data ", with: "")
             let model = Mapper<PositionMachineEvent>().map(JSONString: parsed)!
             position?(model)
         } else if data.starts(with: "logout ") {
-            
+            let parsed = data.replacingOccurrences(of: "logout ", with: "")
+            let model = Mapper<LogoutMachineEvent>().map(JSONString: parsed)!
+            ended?(model)
         } else if data.starts(with: "training_weight_data ") {
             
         } else if data.starts(with: "training_direction_data "){
@@ -89,11 +91,26 @@ class EGymClient {
 //            let model = Mapper<LoginMachineEvent>().map(JSONString: parsed)!
 //            startedTraining?(model)
         }  else if data.starts(with: "end_training "){
-            let parsed = data.replacingOccurrences(of: "end_training ", with: "")
-            let model = Mapper<LogoutMachineEvent>().map(JSONString: parsed)!
-            ended?(model)
+//            let parsed = data.replacingOccurrences(of: "end_training ", with: "")
+//            let model = Mapper<LogoutMachineEvent>().map(JSONString: parsed)!
+//            matches(for: "", in: <#T##String#>)
+//            ended?(LogoutMachineEvent())
         }  else {
             print(data)
+        }
+    }
+    
+    
+    func matches(for regex: String, in text: String) -> [String] {
+        
+        do {
+            let regex = try NSRegularExpression(pattern: regex)
+            let nsString = text as NSString
+            let results = regex.matches(in: text, range: NSRange(location: 0, length: nsString.length))
+            return results.map { nsString.substring(with: $0.range)}
+        } catch let error {
+            print("invalid regex: \(error.localizedDescription)")
+            return []
         }
     }
 }

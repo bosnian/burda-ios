@@ -11,8 +11,8 @@ import Alamofire
 
 
 class NetworkService {
-    var url = "http://egosharp.herokuapp.com"
-    
+//    var url = "http://egosharp.herokuapp.com"
+    var url = "http://10.50.155.27:3000"
     init() {
         
     }
@@ -86,7 +86,7 @@ class NetworkService {
             return
         }
         
-        Alamofire.request(url + "/users/\(id)", method: .post, parameters: parameters).responseObject {
+        Alamofire.request(url + "/users/\(id)", method: .put, parameters: parameters).responseObject {
             (response: DataResponse<UserModel>) in
             
             if response.result.isSuccess {
@@ -97,7 +97,7 @@ class NetworkService {
         }
     }
     
-    func AddTrainig(id: Int, machineType: String, partnerId: Int?, startTime: String, endTime: String, result: Int ,success: @escaping (TrainingModel)->(), fail: @escaping ()->()) {
+    func AddTrainig(id: Int, machineType: String, machineType2: String, partnerId: Int?, startTime: String, endTime: String, result: Int, result2: Int  ,success: @escaping (TrainingModel)->(), fail: @escaping ()->()) {
         
         var parameters = Parameters()
         
@@ -106,7 +106,9 @@ class NetworkService {
         parameters["start_time"] = startTime
         parameters["end_time"] = endTime
         parameters["result"] = result
+        parameters["result2"] = result2
         parameters["machine_type"] = machineType
+        parameters["machine_type2"] = machineType2
 
         Alamofire.request(url + "/trainings/new", method: .post, parameters: parameters).responseObject {
             (response: DataResponse<TrainingModel>) in
@@ -123,6 +125,52 @@ class NetworkService {
 
         Alamofire.request(url + "/trainings?user_id=\(id)", method: .get).responseArray {
             (response: DataResponse<[TrainingModel]>) in
+            
+            if response.result.isSuccess {
+                success(response.result.value!)
+            } else {
+                fail()
+            }
+        }
+    }
+    
+    func GetSex(id: Int, success: @escaping ([SexModel])->(), fail: @escaping ()->()) {
+        
+        Alamofire.request(url + "/sexes?user_id=\(id)", method: .get).responseArray {
+            (response: DataResponse<[SexModel]>) in
+            
+            if response.result.isSuccess {
+                success(response.result.value!)
+            } else {
+                fail()
+            }
+        }
+    }
+    
+    func AddSex(id: Int, rating: Int, success: @escaping (SexModel)->(), fail: @escaping ()->()) {
+        var parameters = Parameters()
+        parameters["user_id"] = id
+        parameters["partner_id"] = Storage.User.partnerId
+        parameters["partner_one_res"] = rating
+        parameters["start_time"] = "\(Date().timeIntervalSince1970)"
+        
+        Alamofire.request(url + "/sexes", method: .post, parameters: parameters).responseObject {
+            (response: DataResponse<SexModel>) in
+            
+            if response.result.isSuccess {
+                success(response.result.value!)
+            } else {
+                fail()
+            }
+        }
+    }
+    
+    func RateSex(sexId: Int, rating: Int, success: @escaping (SexModel)->(), fail: @escaping ()->()) {
+        var parameters = Parameters()
+        parameters["partner_two_res"] = rating
+        
+        Alamofire.request(url + "/sex/\(rating)", method: .post, parameters: parameters).responseObject {
+            (response: DataResponse<SexModel>) in
             
             if response.result.isSuccess {
                 success(response.result.value!)

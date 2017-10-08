@@ -8,6 +8,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Book</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="TGk-pu-bMV">
@@ -41,14 +46,49 @@
                     <view key="view" contentMode="scaleToFill" id="l7r-9d-oii">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CZl-0K-vqe">
+                                <rect key="frame" x="0.0" y="214" width="375" height="453"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uLs-bU-qjI">
+                                <rect key="frame" x="0.0" y="212" width="375" height="2"/>
+                                <color key="backgroundColor" red="0.21176470589999999" green="0.67843137249999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="5kH-ch-lih"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k1j-sk-Js3">
+                                <rect key="frame" x="123" y="155" width="129" height="37"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                <state key="normal" title="Add Intercourse"/>
+                                <connections>
+                                    <action selector="addSexPressed:" destination="oQf-GT-hsh" eventType="touchUpInside" id="KGf-lw-c5R"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CZl-0K-vqe" firstAttribute="top" secondItem="uLs-bU-qjI" secondAttribute="bottom" id="8pp-F4-4bv"/>
+                            <constraint firstItem="uLs-bU-qjI" firstAttribute="top" secondItem="k1j-sk-Js3" secondAttribute="bottom" constant="20" id="Kyt-5E-Ojg"/>
+                            <constraint firstItem="CZl-0K-vqe" firstAttribute="leading" secondItem="2Z9-ZY-GKm" secondAttribute="leading" id="PMY-29-uEl"/>
+                            <constraint firstItem="2Z9-ZY-GKm" firstAttribute="trailing" secondItem="CZl-0K-vqe" secondAttribute="trailing" id="Pjf-zC-TVj"/>
+                            <constraint firstItem="2Z9-ZY-GKm" firstAttribute="trailing" secondItem="uLs-bU-qjI" secondAttribute="trailing" id="VaV-mu-rHz"/>
+                            <constraint firstItem="uLs-bU-qjI" firstAttribute="leading" secondItem="2Z9-ZY-GKm" secondAttribute="leading" id="hZx-Ap-jh6"/>
+                            <constraint firstItem="k1j-sk-Js3" firstAttribute="centerX" secondItem="l7r-9d-oii" secondAttribute="centerX" id="l3H-eN-Mbx"/>
+                            <constraint firstItem="2Z9-ZY-GKm" firstAttribute="bottom" secondItem="CZl-0K-vqe" secondAttribute="bottom" id="oC9-QM-80H"/>
+                            <constraint firstItem="CZl-0K-vqe" firstAttribute="top" secondItem="2Z9-ZY-GKm" secondAttribute="top" constant="150" id="pnu-JM-13Y"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="2Z9-ZY-GKm"/>
                     </view>
                     <navigationItem key="navigationItem" id="5l8-A2-E3C"/>
+                    <connections>
+                        <outlet property="tableView" destination="CZl-0K-vqe" id="o9d-ly-4OL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Iq-Ai-uHI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="249" y="318"/>
+            <point key="canvasLocation" x="248.80000000000001" y="317.99100449775113"/>
         </scene>
     </scenes>
 </document>

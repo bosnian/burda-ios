@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		A006187A1F89BF4D009F879F /* Nokia.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A00618791F89BF4D009F879F /* Nokia.storyboard */; };
 		A006187C1F89BFB8009F879F /* NokiaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A006187B1F89BFB8009F879F /* NokiaViewController.swift */; };
+		A006187F1F89D25A009F879F /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A006187E1F89D25A009F879F /* SideMenu.storyboard */; };
+		A00618811F89D269009F879F /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00618801F89D269009F879F /* SideMenuViewController.swift */; };
+		A00618831F89D9E9009F879F /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00618821F89D9E9009F879F /* UIImageExtensions.swift */; };
+		A00618861F89EAE0009F879F /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A00618851F89EAE0009F879F /* Profile.storyboard */; };
+		A00618881F89EAEE009F879F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00618871F89EAEE009F879F /* ProfileViewController.swift */; };
+		A006188A1F89F023009F879F /* SexModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00618891F89F023009F879F /* SexModel.swift */; };
+		A006188E1F8A0058009F879F /* SexTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A006188C1F8A0058009F879F /* SexTableViewCell.swift */; };
+		A006188F1F8A0058009F879F /* SexTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A006188D1F8A0058009F879F /* SexTableViewCell.xib */; };
+		A00618951F8A02AC009F879F /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00618941F8A02AC009F879F /* RatingView.swift */; };
 		A00FBBE81F89478400837F1D /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A00FBBE71F89478400837F1D /* Dashboard.storyboard */; };
 		A00FBBEA1F894A6E00837F1D /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00FBBE91F894A6E00837F1D /* DashboardViewController.swift */; };
 		A00FBBED1F894B0400837F1D /* Game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A00FBBEC1F894B0400837F1D /* Game.storyboard */; };
@@ -31,6 +40,8 @@
 		A0D52E581F88FBF5001E4EE5 /* LogoutMachineEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D52E571F88FBF5001E4EE5 /* LogoutMachineEvent.swift */; };
 		A0D52E5D1F88FD4F001E4EE5 /* TrainingCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D52E5C1F88FD4F001E4EE5 /* TrainingCollector.swift */; };
 		A0D52E5F1F88FDE2001E4EE5 /* TrainingRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D52E5E1F88FDE2001E4EE5 /* TrainingRequestModel.swift */; };
+		A0E6175C1F8A0C7C00C8FF28 /* AddSex.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0E6175B1F8A0C7C00C8FF28 /* AddSex.storyboard */; };
+		A0E6175E1F8A0C8900C8FF28 /* AddSexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E6175D1F8A0C8900C8FF28 /* AddSexViewController.swift */; };
 		A0EA4C3B1F8933E000026CF6 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0EA4C3A1F8933E000026CF6 /* Login.storyboard */; };
 		A0EA4C3D1F8933F300026CF6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EA4C3C1F8933F300026CF6 /* LoginViewController.swift */; };
 		A0EA4C421F8938D800026CF6 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EA4C411F8938D800026CF6 /* NetworkService.swift */; };
@@ -44,6 +55,15 @@
 		92956435625AF6BA9CBFB853 /* Pods_EgoSharp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EgoSharp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A00618791F89BF4D009F879F /* Nokia.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Nokia.storyboard; sourceTree = "<group>"; };
 		A006187B1F89BFB8009F879F /* NokiaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NokiaViewController.swift; sourceTree = "<group>"; };
+		A006187E1F89D25A009F879F /* SideMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SideMenu.storyboard; sourceTree = "<group>"; };
+		A00618801F89D269009F879F /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		A00618821F89D9E9009F879F /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
+		A00618851F89EAE0009F879F /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		A00618871F89EAEE009F879F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		A00618891F89F023009F879F /* SexModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SexModel.swift; sourceTree = "<group>"; };
+		A006188C1F8A0058009F879F /* SexTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SexTableViewCell.swift; sourceTree = "<group>"; };
+		A006188D1F8A0058009F879F /* SexTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SexTableViewCell.xib; sourceTree = "<group>"; };
+		A00618941F8A02AC009F879F /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		A00FBBE71F89478400837F1D /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		A00FBBE91F894A6E00837F1D /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		A00FBBEC1F894B0400837F1D /* Game.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Game.storyboard; sourceTree = "<group>"; };
@@ -68,6 +88,8 @@
 		A0D52E571F88FBF5001E4EE5 /* LogoutMachineEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutMachineEvent.swift; sourceTree = "<group>"; };
 		A0D52E5C1F88FD4F001E4EE5 /* TrainingCollector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingCollector.swift; sourceTree = "<group>"; };
 		A0D52E5E1F88FDE2001E4EE5 /* TrainingRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingRequestModel.swift; sourceTree = "<group>"; };
+		A0E6175B1F8A0C7C00C8FF28 /* AddSex.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddSex.storyboard; sourceTree = "<group>"; };
+		A0E6175D1F8A0C8900C8FF28 /* AddSexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSexViewController.swift; sourceTree = "<group>"; };
 		A0EA4C3A1F8933E000026CF6 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		A0EA4C3C1F8933F300026CF6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A0EA4C411F8938D800026CF6 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -114,9 +136,47 @@
 			path = Nokia;
 			sourceTree = "<group>";
 		};
+		A006187D1F89D242009F879F /* Side Menu */ = {
+			isa = PBXGroup;
+			children = (
+				A006187E1F89D25A009F879F /* SideMenu.storyboard */,
+				A00618801F89D269009F879F /* SideMenuViewController.swift */,
+			);
+			path = "Side Menu";
+			sourceTree = "<group>";
+		};
+		A00618841F89EAC4009F879F /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				A00618851F89EAE0009F879F /* Profile.storyboard */,
+				A00618871F89EAEE009F879F /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		A006188B1F89F0C9009F879F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A006188C1F8A0058009F879F /* SexTableViewCell.swift */,
+				A006188D1F8A0058009F879F /* SexTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		A00618901F8A0272009F879F /* Rating View */ = {
+			isa = PBXGroup;
+			children = (
+				A00618941F8A02AC009F879F /* RatingView.swift */,
+			);
+			path = "Rating View";
+			sourceTree = "<group>";
+		};
 		A00FBBE61F89476800837F1D /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				A00618901F8A0272009F879F /* Rating View */,
+				A006188B1F89F0C9009F879F /* Cell */,
+				A006187D1F89D242009F879F /* Side Menu */,
 				A00FBBE71F89478400837F1D /* Dashboard.storyboard */,
 				A00FBBE91F894A6E00837F1D /* DashboardViewController.swift */,
 			);
@@ -165,6 +225,8 @@
 		A0CF46661F88DA590071699F /* EgoSharp */ = {
 			isa = PBXGroup;
 			children = (
+				A0E6175A1F8A0C6B00C8FF28 /* Add Sex */,
+				A00618841F89EAC4009F879F /* Profile */,
 				A00618781F89BF3C009F879F /* Nokia */,
 				A075ADF71F89B46500043CC6 /* Trainings */,
 				A00FBBEB1F894AED00837F1D /* Game */,
@@ -201,6 +263,15 @@
 			path = Logic;
 			sourceTree = "<group>";
 		};
+		A0E6175A1F8A0C6B00C8FF28 /* Add Sex */ = {
+			isa = PBXGroup;
+			children = (
+				A0E6175B1F8A0C7C00C8FF28 /* AddSex.storyboard */,
+				A0E6175D1F8A0C8900C8FF28 /* AddSexViewController.swift */,
+			);
+			path = "Add Sex";
+			sourceTree = "<group>";
+		};
 		A0EA4C391F8933C800026CF6 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +295,7 @@
 			children = (
 				A0EA4C441F89399600026CF6 /* ObjectMapper+Alamofire.swift */,
 				A096F71C1F89450200638FDF /* Toast.swift */,
+				A00618821F89D9E9009F879F /* UIImageExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -244,6 +316,7 @@
 				A0D52E5E1F88FDE2001E4EE5 /* TrainingRequestModel.swift */,
 				A0EA4C481F893AE300026CF6 /* UserModel.swift */,
 				A075ADFC1F89B4FB00043CC6 /* TrainingModel.swift */,
+				A00618891F89F023009F879F /* SexModel.swift */,
 			);
 			path = Rest;
 			sourceTree = "<group>";
@@ -311,11 +384,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0EA4C3B1F8933E000026CF6 /* Login.storyboard in Resources */,
+				A00618861F89EAE0009F879F /* Profile.storyboard in Resources */,
 				A00FBBE81F89478400837F1D /* Dashboard.storyboard in Resources */,
 				A075AE011F89B75200043CC6 /* TrainigTableViewCell.xib in Resources */,
 				A006187A1F89BF4D009F879F /* Nokia.storyboard in Resources */,
 				A0CF46721F88DA590071699F /* LaunchScreen.storyboard in Resources */,
 				A0CF466F1F88DA590071699F /* Assets.xcassets in Resources */,
+				A006187F1F89D25A009F879F /* SideMenu.storyboard in Resources */,
+				A006188F1F8A0058009F879F /* SexTableViewCell.xib in Resources */,
+				A0E6175C1F8A0C7C00C8FF28 /* AddSex.storyboard in Resources */,
 				A00FBBED1F894B0400837F1D /* Game.storyboard in Resources */,
 				A0CF466D1F88DA590071699F /* Main.storyboard in Resources */,
 				A075ADF91F89B48A00043CC6 /* Trainings.storyboard in Resources */,
@@ -370,6 +447,7 @@
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyZeroMQ/SwiftyZeroMQ.framework",
+				"${BUILT_PRODUCTS_DIR}/YALSideMenu/SideMenu.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -378,6 +456,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyZeroMQ.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -392,9 +471,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0EA4C421F8938D800026CF6 /* NetworkService.swift in Sources */,
+				A00618831F89D9E9009F879F /* UIImageExtensions.swift in Sources */,
 				A096F71F1F89469300638FDF /* StorageService.swift in Sources */,
+				A006188E1F8A0058009F879F /* SexTableViewCell.swift in Sources */,
 				A0EA4C491F893AE300026CF6 /* UserModel.swift in Sources */,
+				A0E6175E1F8A0C8900C8FF28 /* AddSexViewController.swift in Sources */,
 				A075ADFD1F89B4FB00043CC6 /* TrainingModel.swift in Sources */,
+				A00618811F89D269009F879F /* SideMenuViewController.swift in Sources */,
+				A00618951F8A02AC009F879F /* RatingView.swift in Sources */,
 				A0EA4C3D1F8933F300026CF6 /* LoginViewController.swift in Sources */,
 				A006187C1F89BFB8009F879F /* NokiaViewController.swift in Sources */,
 				A075AE001F89B75200043CC6 /* TrainigTableViewCell.swift in Sources */,
@@ -404,8 +488,10 @@
 				A0D52E5F1F88FDE2001E4EE5 /* TrainingRequestModel.swift in Sources */,
 				A0CF46681F88DA590071699F /* AppDelegate.swift in Sources */,
 				A0D52E541F88F7D5001E4EE5 /* LoginMachineEvent.swift in Sources */,
+				A00618881F89EAEE009F879F /* ProfileViewController.swift in Sources */,
 				A00FBBF11F894BEE00837F1D /* GameScene.swift in Sources */,
 				A0D52E581F88FBF5001E4EE5 /* LogoutMachineEvent.swift in Sources */,
+				A006188A1F89F023009F879F /* SexModel.swift in Sources */,
 				A00FBBEF1F894BB500837F1D /* GameViewController.swift in Sources */,
 				A0EA4C451F89399600026CF6 /* ObjectMapper+Alamofire.swift in Sources */,
 				A0D52E511F88E1D1001E4EE5 /* EGymClient.swift in Sources */,

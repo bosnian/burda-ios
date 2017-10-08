@@ -15,6 +15,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var logoBackground: UIView!
     
 
     override func viewDidLoad() {
@@ -38,8 +39,11 @@ class LoginViewController: UIViewController {
         registerButton.layer.cornerRadius = 10
         registerButton.clipsToBounds = true
         
-        emailField.text = "michael@gmail.com"
-        passwordField.text = "michael"
+        logoBackground.layer.cornerRadius = 20.0
+        logoBackground.clipsToBounds = true
+        
+        emailField.text = "Michael@gmail.com"
+        passwordField.text = "0000"
     }
     
     @IBAction func loginPressed(_ sender: Any) {

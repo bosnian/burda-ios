@@ -17,12 +17,23 @@ class NokiaViewController: UIViewController, WKNavigationDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Nokia Health"
+        
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 54.0 / 255.0, green: 173.0 / 255.0, blue: 1.0, alpha: 1.0)
+        self.navigationController?.navigationBar.tintColor = .white
+        self.navigationController?.navigationBar.isTranslucent = false
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(close))
         
         webView.navigationDelegate = self
         let urlLink = NSURL(string: url)
         if let url = urlLink {
             webView.load(URLRequest(url: url as URL))
         }
+    }
+    
+    func close() {
+        webView.stopLoading()
+        dismiss(animated: true, completion: nil)
     }
     
     func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {

@@ -24,6 +24,15 @@ class GameViewController: UIViewController {
     
     var tc: TrainingCollector?
     
+    var userMachine = ""
+    var partnerMachine = ""
+    
+    var userUpdateLast = 0.0
+    var partnerUpdateLast = 0.0
+    
+    var lastPosition: PositionMachineEvent?
+    var partnerLastPosition: PositionMachineEvent?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,8 +47,16 @@ class GameViewController: UIViewController {
         } else {
             startSingle()
         }
-
-        gameFinished()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now()+5.0) {
+            self.gameScene?.gameStarted = true
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now()+20.0) {
+            self.gameScene?.userFinished = true
+            self.gameScene?.partnerFinished = true
+            self.gameScene?.gameFinished = true
+        }
     }
     
     @IBAction func closePressed(_ sender: Any) {
@@ -47,101 +64,53 @@ class GameViewController: UIViewController {
     }
     
     func gameFinished() {
+        gameScene?.gameFinishedCallback = nil
         let service = NetworkService()
-        service.AddTrainig(id: Storage.User.id!, machineType: "M9", partnerId: playsWithPartner ? Storage.User.partnerId : nil, startTime: tc?.data?.start ?? "", endTime: tc?.data?.end ?? "", result: gameScene?.result ?? 0, success: { (model) in
-            self.dismiss(animated: true, completion: nil)
-        }) {
-            self.view.makeToast("Failed to add trainig!")
+        let m = TrainingModel()
+        m.userId = Storage.User.id
+        m.userId = Storage.Partner.id
+        m.machineType = lastPosition?.machine_type
+        m.machineType2 = partnerLastPosition?.machine_type
+        m.end = lastPosition?.timestamp
+        m.result = gameScene?.result
+        m.result2 = gameScene?.partnerResult
+        Storage.trainings.append(m)
+        DispatchQueue.main.asyncAfter(deadline: .now()+2) {
             self.dismiss(animated: true, completion: nil)
         }
     }
     
     func startSingle() {
         tc = TrainingCollector(client: client, rfid: Storage.User.rfid!)
-        
-        tc?.startCallback = {
-            model in
-            
-            self.gameScene?.gameStarted = true
-            
-        }
-        
         tc?.positionUpdatedCallback = {
             model in
+
             let position = model.payload!.position!
             self.gameScene!.userPosition = Double(position)
-        }
-        
-        tc?.finishCallback = {
-            model in
-            
-            if model.rfid == Storage.User.rfid {
-                self.gameScene?.userFinished = true
-                self.gameScene?.gameFinished = true
-            }
-        }
-        
-        DispatchQueue.global(qos: .background).async {
-            do {
-                try self.client.connect()
-            } catch {
-                print("Something went wrong")
-                print(error)
-            }
+            self.userMachine = model.machine_type!
+
+            self.lastPosition = model
         }
     }
-    
+
     func startMulti() {
-        tc? = TrainingCollector(client: client, rfid: nil)
-        
-        tc?.startCallback = {
-            model in
-            
-            
-            if model.rfid == Storage.User.rfid {
-                self.userStarted = true
-            } else if model.rfid == Storage.Partner.rfid {
-                self.partnerStarted = true
-            }
-            
-            if self.userStarted && self.partnerStarted {
-                self.gameScene?.gameStarted = true
-            }
-        }
-        
+        tc = TrainingCollector(client: client, rfid: nil)
         tc?.positionUpdatedCallback = {
             model in
             let position = model.payload!.position!
             
             if model.rfid == Storage.User.rfid {
                 self.gameScene?.userPosition = Double(position)
+                self.userMachine = model.machine_type!
+                
+                self.lastPosition = model
             } else if model.rfid == Storage.Partner.rfid {
                 self.gameScene?.partnerPosition = Double(position)
+                self.partnerMachine = model.machine_type!
+                
+                self.partnerLastPosition = model
             }
         }
-        
-        tc?.finishCallback = {
-            model in
-            
-            if model.rfid == Storage.User.rfid {
-                self.gameScene?.userFinished = true
-            } else if model.rfid == Storage.Partner.rfid {
-                self.gameScene?.partnerFinished = true
-            }
-            
-            if self.gameScene!.userFinished && self.gameScene!.partnerFinished {
-                self.gameScene!.gameFinished = true
-            }
-            
-        }
-        
-        DispatchQueue.global(qos: .background).async {
-            do {
-                try self.client.connect()
-            } catch {
-                print("Something went wrong")
-                print(error)
-            }
-        }
+
     }
 }

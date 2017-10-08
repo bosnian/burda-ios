@@ -10,4 +10,6 @@ class StorageServce {
     
     var User = UserModel()
     var Partner = UserModel()
+    
+    var trainings = [TrainingModel]()
 }

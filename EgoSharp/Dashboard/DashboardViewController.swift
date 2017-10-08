@@ -7,13 +7,24 @@
 //
 
 import UIKit
+import SideMenu
 
-class DashboardViewController: UIViewController {
+class DashboardViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIViewControllerTransitioningDelegate, SideMenuDelegate {
 
     let activityView = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
     
+    var menuAnimator : MenuTransitionAnimator?
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    var models = [SexModel]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        menuAnimator = MenuTransitionAnimator(mode: .presentation, shouldPassEventsOutsideMenu: false) { [unowned self] in
+            self.dismiss(animated: true, completion: nil)
+        }
         
         title = "Ego#"
         
@@ -27,6 +38,101 @@ class DashboardViewController: UIViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "admin"), style: .plain, target: self, action: #selector(showOptions))
         
         activityView.center = self.view.center
+        
+        tableView.register(UINib(nibName: "SexTableViewCell", bundle: nil), forCellReuseIdentifier: "SexTableViewCell")
+        
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.allowsSelection = false
+        tableView.separatorStyle = .none
+    }
+    
+    @IBAction func addSexPressed(_ sender: Any) {
+        let vc = UIStoryboard(name: "AddSex", bundle: nil).instantiateInitialViewController()!
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let service = NetworkService()
+        service.GetSex(id: Storage.User.id!, success: { (models) in
+            self.models = models.reversed()
+            self.tableView.reloadData()
+        }) {
+            self.view.makeToast("Faile to update!")
+        }
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SexTableViewCell", for: indexPath) as! SexTableViewCell
+        let model = models[indexPath.row]
+        
+        if let time = model.time, let _ = Double(time) {
+            let date = Date(timeIntervalSince1970: Double(time)!)
+            let formatter = DateFormatter()
+            formatter.dateFormat = "dd/MM/yyyy"
+            cell.time.text = formatter.string(from: Date())
+        } else {
+            cell.time.text = "-"
+        }
+        
+        if model.userId == Storage.User.id {
+            cell.userRating = model.rating ?? 0
+            cell.partnerRating = model.partnerRating ?? 0
+        } else {
+            cell.userRating = model.partnerRating ?? 0
+            cell.partnerRating = model.rating ?? 0
+        }
+
+        cell.firstRating.layoutSubviews()
+        cell.secondRating.layoutSubviews()
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return models.count
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let model = models[indexPath.row]
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    func animationController(forPresented presented: UIViewController, presenting _: UIViewController,
+                             source _: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return menuAnimator
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return MenuTransitionAnimator(mode: .dismissal)
     }
     
     func openTrainings() {
@@ -36,7 +142,7 @@ class DashboardViewController: UIViewController {
     
     func playGame()
     {
-        if Storage.Partner.id == nil{
+        if Storage.Partner.id == nil && Storage.User.rfid != nil {
             let vc = UIStoryboard(name: "Game", bundle: nil).instantiateInitialViewController()!
             self.present(vc, animated: true, completion: nil)
         } else if Storage.User.rfid == nil {
@@ -69,51 +175,32 @@ class DashboardViewController: UIViewController {
         }
     }
     
-    func showOptions() {
-        let actionSheetController: UIAlertController = UIAlertController(title: "Settings", message: "Please select option", preferredStyle: .actionSheet)
-        
-        let cancelActionButton = UIAlertAction(title: "Cancel", style: .cancel) { _ in
-  
-        }
-        actionSheetController.addAction(cancelActionButton)
-        
-        let partnerAction = UIAlertAction(title: "Partner", style: .default)
-        { _ in
-            self.addPartner()
-        }
-        actionSheetController.addAction(partnerAction)
-        
-        let nokiaAction = UIAlertAction(title: "Nokia Health", style: .default)
-        { _ in
-            let vc = UIStoryboard(name: "Nokia", bundle: nil).instantiateInitialViewController()!
-            self.present(vc, animated: true, completion: nil)
-        }
-        actionSheetController.addAction(nokiaAction)
-        
-        let braceletAction = UIAlertAction(title: "Bracelet", style: .default)
-        { _ in
-            self.updateBracelet()
-        }
-        actionSheetController.addAction(braceletAction)
-        
-        let userData = UIAlertAction(title: "My Data", style: .default)
-        { _ in
-            
-        }
-        actionSheetController.addAction(userData)
-        
-        let logoutData = UIAlertAction(title: "Log Out", style: .default)
-        { _ in
-            let vc = UIStoryboard(name: "Login", bundle: nil).instantiateInitialViewController()!
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            appDelegate.window?.rootViewController = vc
-        }
-        actionSheetController.addAction(logoutData)
-        
-        self.present(actionSheetController, animated: true, completion: nil)
+    func openProfile() {
+        let vc = UIStoryboard(name: "Profile", bundle: nil).instantiateInitialViewController()!
+        self.present(vc, animated: true, completion: nil)
     }
     
-    func addPartner() {
+    func showOptions() {
+        
+        let vc = UIStoryboard(name: "SideMenu", bundle: nil).instantiateInitialViewController()! as! SideMenuViewController
+        vc.transitioningDelegate = self
+        vc.modalPresentationStyle = .custom
+        vc.delegate = self
+        present(vc, animated: true, completion: nil)
+    }
+    
+    func updateNokia() {
+        let vc = UIStoryboard(name: "Nokia", bundle: nil).instantiateInitialViewController()!
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    func logout() {
+        let vc = UIStoryboard(name: "Login", bundle: nil).instantiateInitialViewController()!
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.window?.rootViewController = vc
+    }
+    
+    func updatePartner() {
         let alert = UIAlertController(title: "Update Partner", message: "Please enter partner ID", preferredStyle: .alert)
         
         

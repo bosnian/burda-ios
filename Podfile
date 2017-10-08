@@ -7,5 +7,6 @@ target 'EgoSharp' do
     pod 'ObjectMapper', '~> 2.2'
     pod 'SwiftyZeroMQ'
     pod 'Kingfisher', '~> 3.0'
+    pod 'YALSideMenu', '~> 2.0'
     pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
 end

@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'E8191541481CA6C87E642A0A35119433'
+               BlueprintIdentifier = '6A15926E3146D87AF986BE7625202E67'
                BlueprintName = 'SwiftyZeroMQ'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'SwiftyZeroMQ.framework'>

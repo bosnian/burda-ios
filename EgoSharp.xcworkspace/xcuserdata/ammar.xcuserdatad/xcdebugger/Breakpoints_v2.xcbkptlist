@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "EgoSharp/Nokia/NokiaViewController.swift"
-            timestampString = "529124154.007354"
+            filePath = "EgoSharp/Services/NetworkService.swift"
+            timestampString = "529152142.055573"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "webView(_:decidePolicyFor:decisionHandler:)"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
+            landmarkName = "AddSex(id:rating:success:fail:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
